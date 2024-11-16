@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".main_screen.MainFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -78,7 +77,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:background="@color/dark_gray"
                 android:contentDescription="@string/filter_icon"
                 android:src="@drawable/ic_filter"
                 android:textSize="12sp" />
