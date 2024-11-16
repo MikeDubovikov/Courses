@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Courses</string>
     <string name="main">Main</string>
-    <string name="favorites">Favorite</string>
+    <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
     <string name="more">More details</string>
     <string name="icon_more_details">Icon more details</string>

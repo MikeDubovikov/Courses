@@ -24,9 +24,9 @@
         android:id="@+id/linearSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/courses"
         app:layout_constraintEnd_toEndOf="@id/contentEnd"
         app:layout_constraintStart_toStartOf="@id/contentStart"
         app:layout_constraintTop_toTopOf="parent">
@@ -103,13 +103,12 @@
             android:text="@string/by_date_added"
             android:textAppearance="?textAppearanceLabelLarge"
             android:textColor="@color/green"
-            android:textSize="14sp"
             android:textStyle="bold" />
 
         <ImageView
             android:layout_width="11.21dp"
             android:layout_height="13.34dp"
-            android:layout_marginStart="2.4dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="1.34dp"
             android:contentDescription="@string/sort_icon"
             android:src="@drawable/ic_sort"
