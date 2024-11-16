@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Курсы</string>
+    <string name="main">Главная</string>
+    <string name="favorites">Избранное</string>
+    <string name="profile">Профиль</string>
+    <string name="more">Подробнее</string>
+    <string name="icon_more_details">Иконка подробностей</string>
+    <string name="course_cover">Обложка курса</string>
+    <string name="search_icon">Иконка поиска</string>
+    <string name="filter_icon">Иконка фильтров</string>
+    <string name="hint_search">Поиск курсов…</string>
+    <string name="sort_icon">Иконка сортировки</string>
+    <string name="by_date_added">По дате добавления</string>
+    <string name="by_popular">По популярности</string>
+    <string name="by_rating">По рейтингу</string>
+</resources>

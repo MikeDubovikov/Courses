@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupNavigation() {
         val navView: BottomNavigationView = binding.navView
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
+            supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
         val navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(
             setOf(

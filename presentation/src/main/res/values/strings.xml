@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Courses</string>
-    <string name="main">Главная</string>
-    <string name="favorites">Избранное</string>
-    <string name="profile">Профиль</string>
+    <string name="main">Main</string>
+    <string name="favorites">Favorite</string>
+    <string name="profile">Profile</string>
+    <string name="more">More details</string>
+    <string name="icon_more_details">Icon more details</string>
+    <string name="course_cover">Course cover</string>
+    <string name="search_icon">Search icon</string>
+    <string name="filter_icon">Filter icon</string>
+    <string name="hint_search">Search courses…</string>
+    <string name="sort_icon">Sort icon</string>
+    <string name="by_date_added">By date added</string>
+    <string name="by_popular">By popular</string>
+    <string name="by_rating">By rating</string>
 </resources>
