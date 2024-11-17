@@ -36,7 +36,7 @@
             android:layout_height="56dp"
             android:layout_weight="1"
             android:backgroundTint="@color/dark_gray"
-            app:cardCornerRadius="32dp"
+            app:cardCornerRadius="28dp"
             app:strokeWidth="0dp">
 
             <LinearLayout
@@ -57,7 +57,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="@string/hint_search" />
+                    android:hint="@string/hint_search"
+                    android:textSize="@dimen/font_size_medium_14" />
 
             </LinearLayout>
 
@@ -69,7 +70,7 @@
             android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:backgroundTint="@color/dark_gray"
-            app:cardCornerRadius="32dp"
+            app:cardCornerRadius="28dp"
             app:strokeWidth="0dp">
 
             <ImageView
@@ -103,6 +104,7 @@
             android:text="@string/by_date_added"
             android:textAppearance="?textAppearanceLabelLarge"
             android:textColor="@color/green"
+            android:textSize="@dimen/font_size_medium_14"
             android:textStyle="bold" />
 
         <ImageView

@@ -27,7 +27,7 @@
         android:layout_marginTop="56dp"
         android:layout_marginBottom="8dp"
         android:text="@string/favorites"
-        android:textSize="22sp"
+        android:textSize="@dimen/font_size_large"
         app:layout_constraintStart_toStartOf="@id/contentStart"
         app:layout_constraintTop_toTopOf="parent" />
 

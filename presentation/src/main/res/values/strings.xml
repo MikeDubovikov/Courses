@@ -13,4 +13,11 @@
     <string name="by_date_added">By date added</string>
     <string name="by_popular">By popular</string>
     <string name="by_rating">By rating</string>
+    <string name="author_image">Author image</string>
+    <string name="author">Author</string>
+    <string name="start_the_course">Start the course</string>
+    <string name="go_to_the_platform">Go to the platform</string>
+    <string name="about_course">About course</string>
+    <string name="favorite_icon">Favorite icon</string>
+    <string name="back_icon">Icon back</string>
 </resources>

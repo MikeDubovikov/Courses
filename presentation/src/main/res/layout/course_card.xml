@@ -52,12 +52,10 @@
                         android:id="@+id/course_rating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="4dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
                         android:drawablePadding="4dp"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/font_size_small"
                         android:textStyle="bold"
                         app:drawableLeftCompat="@drawable/ic_star_rating"
                         tools:text="4.9" />
@@ -75,11 +73,9 @@
                         android:id="@+id/course_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="4dp"
-                        android:textSize="12sp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:textSize="@dimen/font_size_small"
                         tools:text="22 Мая 2024" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -87,7 +83,7 @@
             </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/course_favorite_status"
+                android:id="@+id/course_favorite_status_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|end"
@@ -100,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/course_cover"
+                    android:contentDescription="@string/filter_icon"
                     android:src="@drawable/ic_favorite_button" />
 
             </com.google.android.material.card.MaterialCardView>
@@ -111,12 +107,11 @@
             android:id="@+id/course_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:textAppearance="?textAppearanceTitleMedium"
-            android:textSize="16sp"
+            android:textSize="@dimen/font_size_medium_16"
             android:textStyle="bold"
             tools:text="Java-разработчик с нуля" />
 
@@ -124,21 +119,19 @@
             android:id="@+id/course_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:textColor="@color/stroke"
-            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
             android:textAppearance="?textAppearanceBodySmall"
-            android:textSize="12sp"
+            android:textColor="@color/stroke"
+            android:textFontWeight="500"
+            android:textSize="@dimen/font_size_small"
             tools:text="Освойте backend-разработку и программирование на Java, фреймворки..." />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -149,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="?textAppearanceTitleMedium"
-                android:textSize="16sp"
+                android:textSize="@dimen/font_size_medium_16"
                 android:textStyle="bold"
                 tools:text="999 ₽" />
 
@@ -166,7 +159,7 @@
                     android:text="@string/more"
                     android:textAppearance="?textAppearanceBodySmall"
                     android:textColor="@color/green"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font_size_small"
                     android:textStyle="bold" />
 
                 <ImageView

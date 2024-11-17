@@ -14,4 +14,11 @@
     <string name="by_date_added">По дате добавления</string>
     <string name="by_popular">По популярности</string>
     <string name="by_rating">По рейтингу</string>
+    <string name="author_image">Изображение автора</string>
+    <string name="author">Автор</string>
+    <string name="start_the_course">Начать курс</string>
+    <string name="go_to_the_platform">Перейти на платформу</string>
+    <string name="about_course">О курсе</string>
+    <string name="favorite_icon">Иконка избранного</string>
+    <string name="back_icon">Иконка перехода назад</string>
 </resources>
