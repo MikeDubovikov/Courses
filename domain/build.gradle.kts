@@ -17,4 +17,5 @@ dependencies {
     implementation(project(":common"))
 
     implementation(libs.inject)
+    implementation(libs.kotlinx.coroutines.core)
 }
