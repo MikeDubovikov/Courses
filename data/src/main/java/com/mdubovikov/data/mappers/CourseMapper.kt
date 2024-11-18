@@ -11,7 +11,7 @@ fun CourseDto.toCourseCard(): CourseCard = CourseCard(
     id = id,
     title = title,
     cover = cover,
-    summary = summary,
+    summary = summary.removeHtmlTags(),
     displayPrice = displayPrice,
     createDate = createDate.formatDate()
 )
@@ -23,7 +23,7 @@ fun CourseDto.toCourseDetails(): CourseDetails = CourseDetails(
     title = title,
     cover = cover,
     authorId = authorId.first(),
-    description = description,
+    description = description.removeHtmlTags(),
     displayPrice = displayPrice,
     createDate = createDate.formatDate(),
     courseUrl = courseUrl
@@ -33,4 +33,13 @@ private fun String.formatDate(): String {
     val zonedDateTime = ZonedDateTime.parse(this)
     val formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.getDefault())
     return zonedDateTime.format(formatter)
+}
+
+private fun String.removeHtmlTags(): String {
+    return this
+        .replace(Regex("<[^>]*>"), "")
+        .replace("&nbsp;", " ")
+        .replace("&amp;", "&")
+        .replace(Regex("\\s+"), " ")
+        .trim()
 }

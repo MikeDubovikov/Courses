@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -54,4 +55,6 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.glide)
     ksp(libs.glide.compiler)
+    implementation(libs.adapter.delegates)
+    implementation(libs.adapter.delegates.viewbinding)
 }

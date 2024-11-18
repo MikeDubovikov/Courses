@@ -19,7 +19,7 @@
         tools:layout="@layout/fragment_details">
         <argument
             android:name="courseId"
-            app:argType="integer" />
+            app:argType="long" />
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
