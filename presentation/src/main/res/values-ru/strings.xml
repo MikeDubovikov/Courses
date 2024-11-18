@@ -21,4 +21,9 @@
     <string name="about_course">О курсе</string>
     <string name="favorite_icon">Иконка избранного</string>
     <string name="back_icon">Иконка перехода назад</string>
+    <string name="something_went_wrong">Что-то пошло не так</string>
+    <string name="free">Бесплатно</string>
+    <string name="no_favorite_courses">Избранных курсов нет</string>
+    <string name="course_added">Курс добавлен</string>
+    <string name="course_removed">Курс удален</string>
 </resources>

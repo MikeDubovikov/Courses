@@ -10,7 +10,8 @@ fun CourseCard.toFavoriteCourse(): FavoriteCourse = FavoriteCourse(
     summary = summary,
     rating = rating,
     displayPrice = displayPrice,
-    createDate = createDate
+    createDate = createDate,
+    isFavorite = true
 )
 
 fun FavoriteCourse.toCourseCard(): CourseCard =
@@ -21,7 +22,8 @@ fun FavoriteCourse.toCourseCard(): CourseCard =
         summary = summary,
         rating = rating,
         displayPrice = displayPrice,
-        createDate = createDate
+        createDate = createDate,
+        isFavorite = isFavorite
     )
 
-fun List<FavoriteCourse>.toFavoritesCourses(): List<CourseCard> = map { it.toCourseCard() }
+fun List<FavoriteCourse>.toCourses(): List<CourseCard> = map { it.toCourseCard() }

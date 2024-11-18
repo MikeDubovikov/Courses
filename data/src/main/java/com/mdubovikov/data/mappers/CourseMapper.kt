@@ -13,7 +13,7 @@ fun CourseDto.toCourseCard(): CourseCard = CourseCard(
     cover = cover,
     summary = summary.removeHtmlTags(),
     displayPrice = displayPrice,
-    createDate = createDate.formatDate()
+    createDate = createDate.formatDate(),
 )
 
 fun List<CourseDto>.toCoursesCard(): List<CourseCard> = map { it.toCourseCard() }

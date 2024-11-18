@@ -14,11 +14,11 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.mdubovikov.common.Container
-import com.mdubovikov.domain.catalog.entity.CourseCard
-import com.mdubovikov.presentation.R
 import com.mdubovikov.presentation.adapter.CourseItem
 import com.mdubovikov.presentation.adapter.MainScreenAdapter
 import com.mdubovikov.presentation.databinding.FragmentMainBinding
+import com.mdubovikov.presentation.mappers.toCourseItem
+import com.mdubovikov.presentation.mappers.toCourseItems
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -36,7 +36,7 @@ class MainFragment : Fragment() {
         MainScreenAdapter(
             glide = Glide.with(this),
             onItemClick = ::onCourseClick,
-            onChangeStatusClick = ::onCourseClick
+            onChangeStatusClick = ::onChangeStatusClick
         )
     }
 
@@ -72,7 +72,9 @@ class MainFragment : Fragment() {
                                 rvCourses.visibility = VISIBLE
                                 progressBar.visibility = GONE
                                 courseError.visibility = GONE
-                                map(courses.value)
+                                adapter.apply {
+                                    items = courses.value.toCourseItems()
+                                }
                             }
 
                             is Container.Error -> {
@@ -87,35 +89,15 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun map(courseCardList: List<CourseCard>) {
-
-        val newCourses = courseCardList.map { course ->
-
-            val correctPrice = if (course.displayPrice.contains("-")) {
-                getString(R.string.free)
-            } else {
-                course.displayPrice
-            }
-
-            CourseItem(
-                id = course.id,
-                title = course.title,
-                cover = course.cover,
-                summary = course.summary,
-                rating = course.rating,
-                displayPrice = correctPrice,
-                createDate = course.createDate
-            )
-        }
-
-        adapter.apply {
-            items = newCourses
-        }
-    }
-
     private fun onCourseClick(courseId: Long) {
         val action = MainFragmentDirections.actionMainFragmentToDetailsFragment(courseId)
         findNavController().navigate(action)
+    }
+
+    private fun onChangeStatusClick(courseCard: CourseItem) {
+        lifecycleScope.launch {
+            viewModel.changeFavoriteStatus(courseCard.toCourseItem())
+        }
     }
 
     override fun onDestroyView() {

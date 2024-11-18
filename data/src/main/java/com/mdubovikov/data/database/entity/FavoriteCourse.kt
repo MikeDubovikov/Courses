@@ -11,5 +11,6 @@ data class FavoriteCourse(
     val summary: String,
     val rating: Double,
     val displayPrice: String,
-    val createDate: String
+    val createDate: String,
+    val isFavorite:Boolean
 )

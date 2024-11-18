@@ -20,4 +20,9 @@
     <string name="about_course">About course</string>
     <string name="favorite_icon">Favorite icon</string>
     <string name="back_icon">Icon back</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="free">Free</string>
+    <string name="no_favorite_courses">No favorite courses</string>
+    <string name="course_added">Course added</string>
+    <string name="course_removed">Course removed</string>
 </resources>

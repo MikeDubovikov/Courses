@@ -13,8 +13,8 @@ interface FavoritesDao {
     @Query("SELECT * FROM favorites")
     fun getFavorites(): Flow<List<FavoriteCourse>>
 
-    @Query("SELECT id FROM favorites")
-    fun getIdsFromFavorites(): Flow<List<Int>>
+    @Query("SELECT EXISTS (SELECT * FROM favorites WHERE id=:itemId LIMIT 1)")
+    fun courseIsFavorite(itemId: Long): Flow<Boolean>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addToFavorites(itemDbModel: FavoriteCourse)

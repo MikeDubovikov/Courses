@@ -27,6 +27,7 @@
         android:layout_marginTop="56dp"
         android:layout_marginBottom="8dp"
         android:text="@string/favorites"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_size_large"
         app:layout_constraintStart_toStartOf="@id/contentStart"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,11 +37,24 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="106dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/contentEnd"
         app:layout_constraintStart_toStartOf="@id/contentStart"
         app:layout_constraintTop_toBottomOf="@id/labelFavorites"
         tools:listitem="@layout/course_card" />
+
+    <TextView
+        android:id="@+id/favorites_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_favorite_courses"
+        android:textSize="@dimen/font_size_medium_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

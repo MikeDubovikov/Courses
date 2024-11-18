@@ -11,7 +11,8 @@ interface CatalogRepository {
     suspend fun getCourse(courseId: Long): CourseDetails
     suspend fun getCourseReviewSummary(courseId: Long): CourseReviewSummary
     suspend fun getCourseAuthor(authorId: Long): CourseAuthor
-    fun getCourseIdsFromFavorites(): Flow<List<Int>>
+    fun getFavoritesCourse(): Flow<List<CourseCard>>
+    fun courseIsFavorite(courseId: Long): Flow<Boolean>
     suspend fun addToFavorites(course: CourseCard)
     suspend fun removeFromFavorites(courseId: Long)
 }

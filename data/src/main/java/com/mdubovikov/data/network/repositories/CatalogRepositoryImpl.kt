@@ -4,6 +4,7 @@ import com.mdubovikov.data.database.dao.FavoritesDao
 import com.mdubovikov.data.mappers.toCourseAuthor
 import com.mdubovikov.data.mappers.toCourseDetails
 import com.mdubovikov.data.mappers.toCourseReviewSummary
+import com.mdubovikov.data.mappers.toCourses
 import com.mdubovikov.data.mappers.toCoursesCard
 import com.mdubovikov.data.mappers.toFavoriteCourse
 import com.mdubovikov.data.network.api.ApiService
@@ -13,6 +14,7 @@ import com.mdubovikov.domain.catalog.entity.CourseDetails
 import com.mdubovikov.domain.catalog.entity.CourseReviewSummary
 import com.mdubovikov.domain.catalog.repository.CatalogRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class CatalogRepositoryImpl @Inject constructor(
@@ -21,7 +23,7 @@ class CatalogRepositoryImpl @Inject constructor(
 ) : CatalogRepository {
 
     override suspend fun getCourses(): List<CourseCard> {
-        return apiService.getAllCourses(10).body()?.courses?.toCoursesCard() ?: emptyList()
+        return apiService.getAllCourses(11).body()?.courses?.toCoursesCard() ?: emptyList()
     }
 
     override suspend fun getCourse(courseId: Long): CourseDetails {
@@ -40,8 +42,12 @@ class CatalogRepositoryImpl @Inject constructor(
             ?: CourseAuthor()
     }
 
-    override fun getCourseIdsFromFavorites(): Flow<List<Int>> {
-        return favoritesDao.getIdsFromFavorites()
+    override fun getFavoritesCourse(): Flow<List<CourseCard>> {
+        return favoritesDao.getFavorites().map { it.toCourses() }
+    }
+
+    override fun courseIsFavorite(courseId: Long): Flow<Boolean> {
+        return favoritesDao.courseIsFavorite(courseId)
     }
 
     override suspend fun addToFavorites(course: CourseCard) {

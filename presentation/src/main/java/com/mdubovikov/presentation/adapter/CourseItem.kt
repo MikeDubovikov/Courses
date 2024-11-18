@@ -7,7 +7,8 @@ data class CourseItem(
     val summary: String,
     val rating: Double,
     val displayPrice: String,
-    val createDate: String
+    val createDate: String,
+    val isFavorite: Boolean
 ) : ListItem {
     override val itemId: Long = id
 }

@@ -7,5 +7,6 @@ data class CourseCard(
     val summary: String = "",
     val rating: Double = 0.0,
     val displayPrice: String = "",
-    val createDate: String = ""
+    val createDate: String = "",
+    val isFavorite: Boolean = false
 )
