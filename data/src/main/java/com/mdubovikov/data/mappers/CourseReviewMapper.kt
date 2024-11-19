@@ -1,8 +1,8 @@
 package com.mdubovikov.data.mappers
 
-import android.annotation.SuppressLint
 import com.mdubovikov.data.network.dto.ReviewSummaryDto
 import com.mdubovikov.domain.catalog.entity.CourseReviewSummary
+import java.util.Locale
 
 fun ReviewSummaryDto.toCourseReviewSummary(): CourseReviewSummary = CourseReviewSummary(
     id = id,
@@ -11,7 +11,6 @@ fun ReviewSummaryDto.toCourseReviewSummary(): CourseReviewSummary = CourseReview
     count = count
 )
 
-@SuppressLint("DefaultLocale")
 private fun Double.trimToTenths(): Double {
-    return String.format("%.1f", this).toDouble()
+    return String.format(Locale.US, "%.1f", this).toDouble()
 }

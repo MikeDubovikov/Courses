@@ -17,7 +17,7 @@ Courses is built with XML, Coroutines, Flow, Room based on MVVM architecture.
 ## Screenshots
 
 <div style="display: flex; width: 100%">
-<img src="https://github.com/user-attachments/assets/2fec170d-e5ad-4aa0-a4e1-6aff40a16e1d" width="33%"/>
-<img src="https://github.com/user-attachments/assets/2c740972-844c-4f3a-aeca-01c910a84125" width="33%"/>
-<img src="https://github.com/user-attachments/assets/5e0f7552-3e45-4887-a084-197064c98170" width="33%"/>
+<img src="https://github.com/user-attachments/assets/ac1b301b-f5ee-48ac-8aec-162217842d79" width="32%"/>
+<img src="https://github.com/user-attachments/assets/de11b145-8652-4dcc-8f25-3e993206b962" width="32%"/>
+<img src="https://github.com/user-attachments/assets/8942d350-af10-4ab8-a4ec-5771f6cf18b4" width="32%"/>
 </div>
